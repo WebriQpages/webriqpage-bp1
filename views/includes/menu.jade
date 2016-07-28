@@ -24,9 +24,6 @@
                 ul.nav.navbar-nav.navbar-right
                     li
                         a.page-scroll(href='/') Home
-                    - each menuitem in records.menu.result
-                        li
-                            a.page-scroll(href= menuitem.url)= menuitem.item
                     li.dropdown
                         a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                             | About Us 
@@ -34,19 +31,10 @@
                         ul.dropdown-menu
                             li
                                 a.page-scroll(href='/our-commitment') Our Commitment
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                             li
                                 a(href='/our-team') Our Team
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                             li
                                 a(href='/membership') Membership
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                     li.dropdown
                       a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
                         | Services 
@@ -57,53 +45,32 @@
                           ul.dropdown-menu-2
                             li
                               a(href='/event-sponsorship') Event Sponsorship
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
+
                         li
                           a(href='javascript:void(0)') Export Introduction
                           ul.dropdown-menu-2
                             li
                               a(href='/international-business') International Business
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
+
                             li
                               a(href='/export-and-import-advice') Export & Import Advice
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                         li
                           a(href='javascript:void(0)') Member Benefits
                           ul.dropdown-menu-2
                             li
                               a(href='/in-commerce-magazine') In-Commerce Magazine
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                             li
                               a(href='/referral-scheme') Referral Scheme
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                             li
                               a(href='/corporate-partnership') Corporate Partnership
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                         li
                           a(href='javascript:void(0)') Education & Employee Links
                           ul.dropdown-menu-2
                             li
                               a(href='/funding') Funding
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
+
                             li
                               a(href='/training') Training
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                     li.dropdown
                         a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                             | Events 
@@ -111,21 +78,10 @@
                         ul.dropdown-menu
                             li
                               a(href='/events-list') Events List
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                             li
                               a(href='/events-archive') Events Archive
-                            - each menuitem in records.menu.result
-                                li
-                                    a.page-scroll(href= menuitem.url)= menuitem.item
                     li
                         a.page-scroll(href='/news') News
-                    - each menuitem in records.menu.result
-                        li
-                            a.page-scroll(href= menuitem.url)= menuitem.item
+
                     li
                         a.page-scroll(href='/contact') Contact
-                    - each menuitem in records.menu.result
-                        li
-                            a.page-scroll(href= menuitem.url)= menuitem.item
