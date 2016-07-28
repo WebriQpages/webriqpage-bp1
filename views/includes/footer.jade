@@ -1,15 +1,89 @@
-section#copyright
-	div.container
-		div.row
-			div.col-lg-12
-				p= records.site.sitedata[0].footer
+#footer-layout-box
+    .container
+        .row
+            .col-md-3.col-sm-4
+                h4 Contact
+                p Suite 4, Main Stand New Douglas Park Cadzow Avenue Hamilton ML3 0FT
+                ul
+                    li 
+                        i.fa.fa-phone(aria-hidden='true') 
+                        | 01698 426882
+                    li 
+                        i.fa.fa-print(aria-hidden='true') 
+                        | 01698 424699
+                    li 
+                       a(href='mailto:info@lanarkshirechamber.org') 
+                            i.fa.fa-envelope(aria-hidden='true') 
+                            | info@lanarkshirechamber.org
+            .col-md-2.col-sm-4
+                h4 Quick Links
+                ul
+                    li
+                        a(href='/membership') Membership
+                    li 
+                       a(href='/events-archive') Events Archive
+                    li 
+                       a(href='/contact') Contact
+                    li 
+                       a(href='/cookies') Cookie Policy
+                    li 
+                       a(href='/sitemap.xml') Site Map
+            .col-md-3.col-sm-4
+                h4 Partners
+                ul
+                    li
+                        a(href='http://www.businessgateway.co.uk/', target='_blank') www.businessgateway.co.uk
+                    li
+                        a(href='http://www.scottishenterprise.co.uk/', target='_blank') www.scottishenterprise.co.uk
+                    li
+                        a(href='http://www.visitlanarkshire.com/', target='_blank') www.visitlanarkshire.co.uk
+            .col-md-4.col-sm-12
+                h4 Join Our Mailing List
+                #mc_embed_signup
+                    style(type='text/css').
+                        #mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }
+
+                    form#mc-embedded-subscribe-form.validate(action='//lanarkshirechamber.us13.list-manage.com/subscribe/post?u=5fd4be273d5710ac4e9816f63&amp;id=46e3bd91d6', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='novalidate')
+                        #mc_embed_signup_scroll
+                          .mc-field-group
+                            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='ENTER YOUR EMAIL HERE', required='', aria-required='true')
+                          .mc-field-group-submit
+                            input#mc-embedded-subscribe.button(type='submit', value='JOIN NOW', name='subscribe')
+                          #mce-responses.clear
+                            #mce-error-response.response(style='display:none')
+                            #mce-success-response.response(style='display:none')
+                          // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                          div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                            input(type='text', name='b_5fd4be273d5710ac4e9816f63_46e3bd91d6', tabindex='-1', value='')
+                <br>
+                h5.mt-50 Follow Us On
+                ul#social-media
+                  li
+                    a(href='//www.facebook.com/Lanarkshire-Chamber-of-Commerce-332487226795602/', target='_blank')
+                      img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/aaa04d2c107fa2c70a7e797c5cf8be7a553a6b3a/fb.jpg')
+                  li
+                    a(href='//twitter.com/lanarkshirecofc', target='_blank')
+                      img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/a225ccc65eadc16de5559163d705e658368e8ace/twitter.jpg')
+                  li
+                    a(href='//www.linkedin.com/company/lanarkshire-chamber-of-commerce', target='_blank')
+                      img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/01be8d3e387075fbed5b31302e0ca232051e4735/linked.jpg')
 
 
-	!= js()
+#copyright
+    .container
+        p= records.site.sitedata[0].footer
 
+    != js()
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='../js/webriq-bootstrap-material-ui.min.js')
+    script(src='../js/modernizr.custom.js')
+    script(src='../js/jquery.imagesloaded.min.js')
+    script(src='../js/cbpBGSlideshow.min.js')
+    script.
+      $(function() {
+      cbpBGSlideshow.init();
+      });
 
-	<!-- Google Analytics -->
-	script(type="text/javascript")
-		!= records.site.sitedata[0].analytics
-
-
+    <!-- Google Analytics -->
+    script(type="text/javascript")
+        != records.site.sitedata[0].analytics

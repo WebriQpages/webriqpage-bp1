@@ -7,6 +7,7 @@ records      = require 'roots-records'
 collections  = require 'roots-collections'
 excerpt      = require 'html-excerpt'
 moment       = require 'moment'
+cleanUrls    = require 'clean-urls'
 
 monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 
@@ -19,7 +20,6 @@ module.exports =
     dateFormat: (date, format) ->
       moment(date).format(format)
 
-
   extensions: [
     records(
       menu: { file: "data/menu.json" }
@@ -27,6 +27,7 @@ module.exports =
     ),
     collections(folder: 'posts', layout: 'post'),
     collections(folder: 'page', layout: 'post'),
+    collections(folder: 'events', layout: 'post'),
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.styl')
   ]
@@ -40,3 +41,6 @@ module.exports =
 
   jade:
     pretty: true
+
+  server:
+    "clean_urls": true

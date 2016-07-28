@@ -1,8 +1,7 @@
-extends layout
+extends layout-general
 
 block content
-  article.box.page
-    .container
-      header
-        h2= entry.title
-      != entry.body
+	article.box.page
+		h1.title-header= entry.title
+		<hr>
+		!= entry.body
