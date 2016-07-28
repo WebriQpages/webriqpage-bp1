@@ -1,17 +1,131 @@
 .container
-	.navbar-header
-		button.navbar-toggle.collapsed(data-target='#bs-example-navbar-collapse-1', data-toggle='collapse', type='button')
-			span.sr-only Toggle navigation
-			span.icon-bar
-			span.icon-bar
-			span.icon-bar
-		a.navbar-brand.page-scroll(href='/')
-			img(src= records.site.sitedata[0].logo)
-	#bs-example-navbar-collapse-1.collapse.navbar-collapse
-		ul.nav.navbar-nav.navbar-right
-			li
-				a.page-scroll(href='/') Home
-			- each menuitem in records.menu.result
-				li
-					a.page-scroll(href= menuitem.url)= menuitem.item
-
+    .row
+        #logo.col-xs-4.col-sm-4.col-md-3
+            a(href='/')
+                img(src= records.site.sitedata[0].logo)
+        #contact.col-xs-8.col-sm-8.col-md-9.mt-20
+            ul
+                li
+                    strong t
+                    | : 01698 - 426882
+                li.divider |
+                li
+                    strong e
+                    | : info@lanarkshirechamber.org
+        #menu-header.col-xs-12.col-sm-12.col-md-9
+            .navbar-header.hidden-md.hidden-sm.hidden-lg
+                button.navbar-toggle.collapsed(data-target='#bs-example-navbar-collapse-1', data-toggle='collapse', type='button')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                span.navbar-brand.page-scroll MENU
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a.page-scroll(href='/') Home
+                    - each menuitem in records.menu.result
+                        li
+                            a.page-scroll(href= menuitem.url)= menuitem.item
+                    li.dropdown
+                        a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                            | About Us 
+                            i.fa.fa-caret-down(aria-hidden='true')
+                        ul.dropdown-menu
+                            li
+                                a.page-scroll(href='/our-commitment') Our Commitment
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                                a(href='/our-team') Our Team
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                                a(href='/membership') Membership
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                    li.dropdown
+                      a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+                        | Services 
+                        i.fa.fa-caret-down(aria-hidden='true')
+                      ul.dropdown-menu
+                        li
+                          a(href='javascript:void(0)') Events & Networking
+                          ul.dropdown-menu-2
+                            li
+                              a(href='/event-sponsorship') Event Sponsorship
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                        li
+                          a(href='javascript:void(0)') Export Introduction
+                          ul.dropdown-menu-2
+                            li
+                              a(href='/international-business') International Business
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                              a(href='/export-and-import-advice') Export & Import Advice
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                        li
+                          a(href='javascript:void(0)') Member Benefits
+                          ul.dropdown-menu-2
+                            li
+                              a(href='/in-commerce-magazine') In-Commerce Magazine
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                              a(href='/referral-scheme') Referral Scheme
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                              a(href='/corporate-partnership') Corporate Partnership
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                        li
+                          a(href='javascript:void(0)') Education & Employee Links
+                          ul.dropdown-menu-2
+                            li
+                              a(href='/funding') Funding
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                              a(href='/training') Training
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                    li.dropdown
+                        a.dropdown-toggle(href='/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                            | Events 
+                            i.fa.fa-caret-down(aria-hidden='true')
+                        ul.dropdown-menu
+                            li
+                              a(href='/events-list') Events List
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                            li
+                              a(href='/events-archive') Events Archive
+                            - each menuitem in records.menu.result
+                                li
+                                    a.page-scroll(href= menuitem.url)= menuitem.item
+                    li
+                        a.page-scroll(href='/news') News
+                    - each menuitem in records.menu.result
+                        li
+                            a.page-scroll(href= menuitem.url)= menuitem.item
+                    li
+                        a.page-scroll(href='/contact') Contact
+                    - each menuitem in records.menu.result
+                        li
+                            a.page-scroll(href= menuitem.url)= menuitem.item

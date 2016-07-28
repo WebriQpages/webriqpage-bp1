@@ -7,6 +7,7 @@ records      = require 'roots-records'
 collections  = require 'roots-collections'
 excerpt      = require 'html-excerpt'
 moment       = require 'moment'
+cleanUrls    = require 'clean-urls'
 
 monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 
@@ -18,7 +19,6 @@ module.exports =
       excerpt.text(html, length || 100, ellipsis || '...')
     dateFormat: (date, format) ->
       moment(date).format(format)
-
 
   extensions: [
     records(
@@ -40,3 +40,6 @@ module.exports =
 
   jade:
     pretty: true
+
+  server:
+    "clean_urls": true

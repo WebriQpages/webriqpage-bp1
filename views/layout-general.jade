@@ -26,11 +26,16 @@ html
   body#page-top
     section#header.pt-10.pb-10
       include includes/menu
-    section#main-slider
-      include includes/header
+
+    section#header-bg
 
     section.main-container
-      block content
-
+      .container
+        .row
+            .col-left.col-sm-12.col-md-8
+              block content
+            .col-right.col-xs-12.col-sm-7.col-md-4
+              .row
+                include includes/general-sidebar
     footer
       include includes/footer
