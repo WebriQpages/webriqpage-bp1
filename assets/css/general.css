@@ -349,7 +349,23 @@ h1.title {
     text-transform: capitalize;
     font-size: 18px;
 }
-
+.event-shortdesc p.read-more, .news-item .short-desc p.read-more {
+    text-align: right;
+}
+.event-shortdesc p.read-more a, .news-item .short-desc p.read-more a {
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.event-items, .news-item {
+    border-bottom: 1px solid #eee;
+}
+.event-items .event-day, .news-item .published {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.event-items .event-day date, .news-item .published date {
+    text-transform: uppercase;
+}
 #mc_embed_signup #mc_embed_signup_scroll .mc-field-group {
     width: 70%;
     float: left;
