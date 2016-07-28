@@ -58,7 +58,7 @@ block content
                         | Upcoming Events
                         a.right(href='/events-list') VIEW ALL
                   tbody
-                    each post in events.sort('date', 'desc').slice(0,4)
+                    each post in events.orderBy('date', 'desc').slice(0,4)
                       tr
                         td.event-date
                           .date-cal= dateFormat(post.date, 'MMM')
