@@ -1,0 +1,19 @@
+extends layout-general
+
+block content
+
+  h1.title-header List of Events
+  hr
+  .main-content
+    .event-items
+      each post in events.orderBy('date', 'eventdesc').slice(0,20)
+        h3.event-title
+          a(href=post.permalink)= post.title
+        .event-day
+          i.fa.fa-clock-o(aria-hidden='true')
+            date= dateFormat(post.date, 'LL')
+        .clear
+        .event-shortdesc
+          p != postExcerpt(post.body, 250)
+          p.read-more
+            a(href=post.permalink) Read More
