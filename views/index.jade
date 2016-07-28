@@ -49,6 +49,7 @@ block content
               h1.title Event Calendar
               p
                 | Our events calendar provides all you need to know about the latest Chamber events and networking opportunities. We also welcome suggestions from Members on any events you would like to see run in the future, so get in touch with our Events Team at anne.kennedy@lanarkshirechamber.org  and we'll do our best to accommodate
+
               #calendar
                 table.event-handler
                   thead
@@ -57,42 +58,16 @@ block content
                         | Upcoming Events
                         a.right(href='/events-list') VIEW ALL
                   tbody
-                    tr
-                      td.event-date
-                        .date-cal Sep
-                        .date-day 8
-                        .date-year 2016
-                      td.event-desc
-                        .desc-text
-                          p.event-title
-                            a(href='/events/networking-breakfast-buzzin-lanarkshire') Networking Breakfast – Buzzin Lanarkshire
-                    tr
-                      td.event-date
-                        .date-cal Oct
-                        .date-day 5
-                        .date-year 2016
-                      td.event-desc
-                        .desc-text
-                          p.event-title
-                            a(href='/events/networking-lunch') Networking Lunch – Lanarkshire Credit Union
-                    tr
-                      td.event-date
-                        .date-cal Oct
-                        .date-day 27
-                        .date-year 2016
-                      td.event-desc
-                        .desc-text
-                          p.event-title
-                            a(href='/events/joint-chamber-networking-event') Joint Chamber Networking Event
-                    tr
-                      td.event-date
-                        .date-cal Nov
-                        .date-day 9
-                        .date-year 2016
-                      td.event-desc
-                        .desc-text
-                          p.event-title
-                            a(href='/events/networking-breakfast-spenergy') Networking Breakfast –SPEnergy
+                    each post in events.sort('date', 'desc').slice(0,4)
+                      tr
+                        td.event-date
+                          .date-cal= dateFormat(post.date, 'MMM')
+                          .date-day= dateFormat(post.date, 'D')
+                          .date-year= dateFormat(post.date, 'YYYY')
+                        td.event-desc
+                          .desc-text
+                            p.event-title
+                              a(href=post.permalink)= post.title
             #member.col-lg-12
               p
                 a(href='/page/membership')
