@@ -12,7 +12,7 @@ block content
             a(href=post.permalink)= post.title
           .event-day
             i.fa.fa-clock-o(aria-hidden='true')
-              date= dateFormat(post.date, 'LL')
+              date= dateFormat(post.date, 'dddd, MMMM DD, YYYY')
           .clear
           .event-shortdesc
             != postExcerpt(post.body, 250)
