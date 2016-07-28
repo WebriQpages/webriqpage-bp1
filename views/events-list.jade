@@ -14,6 +14,6 @@ block content
             date= dateFormat(post.date, 'LL')
         .clear
         .event-shortdesc
-          p != postExcerpt(post.body, 250)
+          != postExcerpt(post.body, 250)
           p.read-more
             a(href=post.permalink) Read More
