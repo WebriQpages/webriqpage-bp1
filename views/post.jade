@@ -2,7 +2,6 @@ extends layout-general
 
 block content
 	article.box.page
-
-		header
-			h2= entry.title
+		h1.title-header= entry.title
+		<hr>
 		!= entry.body

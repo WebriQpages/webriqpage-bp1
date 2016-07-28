@@ -15,19 +15,19 @@ block content
           br
           .row
             .col-xs-12.col-sm-3.col-md-3.text-center
-              a(href='/page/event-sponsorship')
+              a(href='/event-sponsorship')
                 img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/be6ec29909205ae53e272d89a841c5297ce177fa/icon-1.png')
                 h4 Events & Networking
             .col-xs-12.col-sm-3.col-md-3.text-center
-              a(href='/page/international-business')
+              a(href='/international-business')
                 img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/d2e67e60ee01b75c6da91ca5712de7729c89368c/icon-2.png')
                 h4 International Trade
             .col-xs-12.col-sm-3.col-md-3.text-center
-              a(href='/page/training')
+              a(href='/training')
                 img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/1673a45adae424f458a036e194255f5c15f82542/icon-3.png')
                 h4 Employment Training
             .col-xs-12.col-sm-3.col-md-3.text-center
-              a(href='/page/funding')
+              a(href='/funding')
                 img(src='https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/img/a02f907b24f19841e8d922a1321641fdd6db9866/icon-4.png')
                 h4 Business Funding
           h1.title OUR CORPORATE PARTNERS
@@ -58,7 +58,7 @@ block content
                         | Upcoming Events
                         a.right(href='/events-list') VIEW ALL
                   tbody
-                    each post in events.sort('date', 'desc').slice(0,4)
+                    each post in events.orderBy('date', 'desc').slice(0,4)
                       tr
                         td.event-date
                           .date-cal= dateFormat(post.date, 'MMM')
