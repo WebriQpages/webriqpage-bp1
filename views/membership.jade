@@ -1,0 +1,115 @@
+extends layout-general
+
+block content 
+
+  h1.title-header Membership
+  hr
+  .main-content
+    p
+      | Being a member of Lanarkshire Chamber means you can access a variety of services designed to help you build business relationships, develop useful new skills and improve your ability to grow and be competitive. Key benefits of Chamber Membership include:
+    ul
+      li be part of a local and national network
+      li attend events tailored to assist in the development of your business
+      li access information services
+      li utilise value added services
+      li get involved with national representation and lobbying
+      li be involved in key areas that affect business eg Local Economic Forum
+
+    h4#annual-subscription-fees Annual Subscription Fees
+
+    table.table.eq-ui-data-table.eq-ui-hoverable.z-depth-1#table-edt
+      thead
+        tr
+          th.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate BUSINESS TYPE
+          th.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate COST
+      tbody
+        tr
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate Individual / Sole Trader
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate Charity
+        tr
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate Charity
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate £150 + VAT
+        tr
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate 2 - 5 Employees
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate £200 + VAT
+        tr
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate 6 - 50 Employess
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate £250 + VAT
+        tr
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate More than 50 Employees
+          td.eq-ui-data-table-cell-non-numeric.eq-ui-data-table-cell-truncate £350 + VAT
+
+    | Apply for Membership. Please contact Anne Kennedy on 01698 426882 or email <a href="mailto:anne.kennedy@lanarkshirechamber.org">anne.kennedy@lanarkshirechamber.org</a> or fill in the form below to become a member.
+
+    br
+    br
+    br
+    
+    form
+      .row
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#first_name_pre.eq-ui-input(type='text', placeholder='John Smith')
+                label(for='first_name_pre') Full Name
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#comp_name_pre.eq-ui-input(type='text', placeholder='ABC Company')
+                label(for='comp_name_pre') Company Name
+
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#email_val.eq-ui-input.validate(type='email', placeholder='abc.company@youremail.com')
+                label(for='email_val', data-error='wrong', data-success='right') Email
+
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#turn_over_sec.eq-ui-input(type='text', placeholder='This is (Optional)')
+                label(for='turn_over_sec') Company Name
+
+      .row
+        .col-md-12
+          p.text-form Number of Employees?
+          .eq-ui-form-group
+            input#individual.eq-ui-input.with-gap(name='group1', type='radio')
+            label(for='individual') Individual / Sole Trader
+          .eq-ui-form-group
+            input#charity.eq-ui-input.with-gap(name='group1', type='radio')
+            label(for='charity') Charity
+          .eq-ui-form-group
+            input#2_5_employess.eq-ui-input.with-gap(name='group1', type='radio')
+            label(for='2_5_employess') 2 - 5 Employees
+          .eq-ui-form-group
+            input#6_50_employess.eq-ui-input.with-gap(name='group1', type='radio')
+            label(for='6_50_employess') 6 - 50 Employees
+          .eq-ui-form-group
+            input#more_than_50.eq-ui-input.with-gap(name='group1', type='radio')
+            label(for='more_than_50') More than 50 Employees
+
+      .row
+        .col-md-12
+          p.text-form Are you an Exporter?
+          .col-xs-12.col-sm-6.col-md-2
+            .eq-ui-form-group
+              input#Yes_.eq-ui-input.with-gap(name='group2', type='radio')
+              label(for='Yes_') Yes
+          .col-xs-12.col-sm-6.col-md-2
+            .eq-ui-form-group
+              input#No_.eq-ui-input.with-gap(name='group2', type='radio')
+              label(for='No_') No
+
+      .row
+        .col-md-12
+          p.text-form Please Write Your Comment Below:
+          .eq-ui-form-group.eq-ui-input-field
+            textarea#textarea_field.eq-ui-textarea(rows='1', placeholder="Enter your message here...")
+            label(for='textarea_field')
+
+      button.btn.btn-primary.btn-lg.eq-ui-waves-light(type='submit', name='submit', value='submit') Submit      
