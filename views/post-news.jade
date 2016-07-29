@@ -5,10 +5,12 @@ block content
 		h1.title-header= entry.title
 		hr
 		.main-content
+			br
 			.entry-date
 				i(class="fa fa-clock-o", aria-hidden="true")
 					date= dateFormat(entry.date, 'dddd, LL')
 			.lead-image
 				img.img-responsive(src= entry.banner)
+			br
 			.lead-content
 				!= entry.body
