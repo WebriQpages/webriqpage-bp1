@@ -16,7 +16,9 @@ block content
           .lead-image
             img.img-responsive(src=post.banner)
           .clear
+          br
           .event-shortdesc
             != postExcerpt(post.body, 250)
             p.read-more
               a(href=post.permalink) Read More
+          hr
