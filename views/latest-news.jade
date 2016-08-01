@@ -7,9 +7,9 @@ block content
   .main-content
     .news-wrapper
       .news-items
-        each post in events.orderBy('date', 'shortdesc').slice(0,20)
+        each post in news.orderBy('date', 'shortdesc').slice(0,20)
           h3.event-title
-            a(href=post.permalink)= post.title
+            a(href=post.permalink)= post-news.title
           .news-day
             i.fa.fa-clock-o(aria-hidden='true')
               date= dateFormat(post.date, 'dddd, MMMM DD, YYYY')
