@@ -1,6 +1,6 @@
 ---
-title: Sample News
-banner: /img/news.jpg
+title: Sample
+banner: /img/ex.jpg
 shortdesc: Lorem ipsum dolor sit amet, consectetuer adipiscin
 cmsUserSlug: sample
 date: now
