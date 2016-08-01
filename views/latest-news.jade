@@ -1,0 +1,24 @@
+extends layout-general
+
+block content
+
+  h1.title-header List of News
+  hr
+  .main-content
+    .event-wrapper
+      .event-items
+        each post in news.orderBy('date', 'shortdesc').slice(0,20)
+          h3.event-title
+            a(href=post.permalink)= post.title
+          .event-day
+            i.fa.fa-clock-o(aria-hidden='true')
+              date= dateFormat(post.date, 'dddd, MMMM DD, YYYY')
+          .lead-image
+            img.img-responsive(src=post.banner)
+          .clear
+          br
+          .event-shortdesc
+            != postExcerpt(post.body, 250)
+            p.read-more
+              a(href=post.permalink) Read More
+          hr

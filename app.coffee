@@ -28,6 +28,7 @@ module.exports =
     collections(folder: 'posts', layout: 'post'),
     collections(folder: 'page', layout: 'post'),
     collections(folder: 'events', layout: 'post'),
+    collections(folder: 'news', layout: 'post-news'),
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.styl')
   ]
