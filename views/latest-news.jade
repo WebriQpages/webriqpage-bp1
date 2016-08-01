@@ -9,10 +9,12 @@ block content
       .event-items
         each post in news.orderBy('date', 'shortdesc').slice(0,20)
           h3.event-title
-            a(href=post.permalink)= post.title
+            a(href=post.permalink)= entry.title
           .event-day
             i.fa.fa-clock-o(aria-hidden='true')
               date= dateFormat(post.date, 'dddd, MMMM DD, YYYY')
+          .lead-image
+            img.img-responsive(src=entry.banner)
           .clear
           .event-shortdesc
             != postExcerpt(post.body, 250)
